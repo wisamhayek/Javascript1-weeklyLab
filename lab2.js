@@ -22,3 +22,48 @@ function twoSum(arr, target) {
 }
 
 twoSum(arr1, 11)
+
+
+// 3) 
+let driver = {
+    name: "Hamilton",
+    team: "Mercedes",
+    age: 30,
+    firstPlace: 101,
+    podiums: 300,
+    stillRacing: true
+}
+console.log(Object.keys(driver));
+
+function replaceObjKey (obj,targetKey,replaceKey){
+    //Create new object key, from the same value -> then delete the old key:value.
+    obj[replaceKey] = obj[targetKey];
+    // obj.currentTeam = obj.team;
+    // obj.currentAge = obj.age;
+    delete obj[targetKey];
+    // delete obj.team;
+    // delete obj.age;
+    // console.log(obj);
+    return obj;
+  };
+replaceObjKey(driver,"name","FirstName");
+
+
+// 4) 
+let driver = {
+    name: "Max",
+    team: "RedBull",
+    age: 23,
+    firstPlace: 50,
+    podiums: 150,
+    stillRacing: true
+}
+console.log(Object.values(driver));
+
+function replaceObjValues(obj,targetKey,value){
+    //will replace the target with the value, if doesnt exist -> it will be created. 
+    obj[targetKey]=value
+    // console.log(obj);
+    return obj;
+}
+replaceObjValues(driver,"name","wisam")
